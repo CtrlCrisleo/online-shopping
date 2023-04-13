@@ -1,0 +1,29 @@
+{
+    "products": [
+        {
+            "name": "redbull",
+            "unit_price": 5000,
+            "stock": 5
+        },
+        {
+            "name": "rice",
+            "unit_price": 2000,
+            "stock": 0
+        },
+        {
+            "name": "lemon chips",
+            "unit_price": 1500,
+            "stock": 1
+        },
+        {
+            "name": "meat",
+            "unit_price": 500,
+            "stock": 8
+        },
+        {
+            "name": "cheese",
+            "unit_price": 1300,
+            "stock": 2
+        }
+    ]
+}
