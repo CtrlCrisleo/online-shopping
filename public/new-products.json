@@ -1,0 +1,49 @@
+{
+    "products": [
+        {
+            "name": "redbull",
+            "unit_price": 5000,
+            "stock": 5
+        },
+        {
+            "name": "rice",
+            "unit_price": 2000,
+            "stock": 0
+        },
+        {
+            "name": "lemon chips",
+            "unit_price": 1500,
+            "stock": 1
+        },
+        {
+            "name": "meat",
+            "unit_price": 500,
+            "stock": 8
+        },
+        {
+            "name": "cheese",
+            "unit_price": 1300,
+            "stock": 2
+        },
+        {
+            "name": "potatoes",
+            "unit_price": 800,
+            "stock": 10
+        },
+        {
+            "name": "beans",
+            "unit_price": 1000,
+            "stock": 3
+        },
+        {
+            "name": "peaches",
+            "unit_price": 400,
+            "stock": 0
+        },
+        {
+            "name": "egg",
+            "unit_price": 100,
+            "stock": 20
+        }
+    ]
+}

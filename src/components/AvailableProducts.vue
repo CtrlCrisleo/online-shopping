@@ -1,6 +1,6 @@
 <template>
     <header id="alternova-shop">
-        <img src="~\public\img\cropped-logo-Alternova.png">
+        <img src="~\public\img\cropped-logo-Alternova.png" class="logo">
     </header>
     <div class="container">
         <section class="products">
@@ -99,6 +99,11 @@ export default {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+
+    }
+    .logo{
+        max-width: 100%;
+        height: auto;
     }
     .products {
         flex-basis: 50%;
@@ -131,6 +136,7 @@ export default {
     .dimensions {
         width: 100px;
         height: auto;
+        max-width: 200px;
     }
     .product-name {
         text-align: center;
@@ -152,5 +158,32 @@ export default {
         flex: 2;
         max-width: 70%;
         text-align: center;
+    }
+    @media (max-width: 767px) {
+        header {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media (max-width: 767px) {
+        .container {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+    }
+    @media (max-width: 767px) {
+        .products {
+            flex-basis: 100%;
+        }
+    }
+    @media (max-width: 767px) {
+        .product {
+            width: 50%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        .product {
+            width: 50%;
+        }
     }
 </style>

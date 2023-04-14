@@ -1,17 +1,19 @@
 <template>
     <section class="shopping-cart">
-        <h1>Carrito</h1>
-        <div v-for="item in cartItems" :key="item.name">
-            <div class="show-cart">
-                <p class="item">{{ item.name }}</p>
-                <p class="item">{{ item.quantity }}</p>
-                <p class="item">{{ item.unit_price }}</p>
-                <p class="item">{{ item.quantity * item.unit_price }}</p>
+        <div class="cart-border">
+            <h1>Carrito</h1>
+            <div v-for="item in cartItems" :key="item.name">
+                <div class="show-cart">
+                    <p class="item">{{ item.name }}</p>
+                    <p class="item">{{ item.quantity }}</p>
+                    <p class="item">${{ item.unit_price }}</p>
+                    <p class="item">${{ item.quantity * item.unit_price }}</p>
+                </div>
             </div>
-        </div>
-        <div class="cart-final">
-            <p class="total-value">{{ getTotalValue }}</p>
-            <button class="create-order-button" @click="createOrder">Crear orden</button>
+            <div class="cart-final">
+                <p class="total-value">{{ getTotalValue }}</p>
+                <button class="create-order-button" @click="createOrder">Crear orden</button>
+            </div>
         </div>
     </section>
 </template>
@@ -60,7 +62,13 @@
 <style>
     .shopping-cart {
         flex-basis: 50%;
-        border: 1px solid #000;
+        padding: 20px;
+        /*Responsive*/
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .cart-border {
+        border: 2px solid #000;
         padding: 20px;
     }
     .show-cart {
