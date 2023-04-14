@@ -7,7 +7,7 @@ Building an online shopping site that reads a JSON file with information about t
 
 ## Project setup
 
-1. Confirm that ***Node.js*** is installed on the machine.
+1. Confirm that ***Node.js*** is already installed on the machine.
 ```
 node -v
 ```
