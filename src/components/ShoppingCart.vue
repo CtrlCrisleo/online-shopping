@@ -1,17 +1,23 @@
 <template>
     <section class="shopping-cart">
         <div class="cart-border">
-            <h1>Carrito</h1>
+            <h1>Carrito ({{ totalQuantity }})</h1>
+            <div class="cart-header">
+                <p class="header-item">Producto</p>
+                <p class="header-item">Cantidad</p>
+                <p class="header-item">Precio Unitario</p>
+                <p class="header-item">Precio total</p>
+            </div>
             <div v-for="item in cartItems" :key="item.name">
                 <div class="show-cart">
-                    <p class="item">{{ item.name }}</p>
-                    <p class="item">{{ item.quantity }}</p>
-                    <p class="item">${{ item.unit_price }}</p>
-                    <p class="item">${{ item.quantity * item.unit_price }}</p>
+                    <p class="cart-item">{{ item.name }}</p>
+                    <p class="cart-item">{{ item.quantity }}</p>
+                    <p class="cart-item">${{ item.unit_price }}</p>
+                    <p class="cart-item">${{ item.quantity * item.unit_price }}</p>
                 </div>
             </div>
             <div class="cart-final">
-                <p class="total-value">{{ getTotalValue }}</p>
+                <p class="total-value">Total Orden ${{ getTotalValue }}</p>
                 <button class="create-order-button" @click="createOrder">Crear orden</button>
             </div>
         </div>
@@ -29,6 +35,9 @@
         computed: {
             getTotalValue() {
                 return this.cartItems.reduce((acc, item) => acc + (item.quantity * item.unit_price), 0);
+            },
+            totalQuantity() {
+                return this.cartItems.reduce((acc, item) => acc + item.quantity, 0);
             }
         },
         methods: {
@@ -71,6 +80,17 @@
         border: 2px solid #000;
         padding: 20px;
     }
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        border-bottom: 2px solid #000;
+        font-weight: bold;
+    }
+    .header-item {
+        flex: 1;
+        text-align: center;
+    }
     .show-cart {
         display: flex;
         justify-content: center;
@@ -78,15 +98,18 @@
     }
     .cart-final {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         margin-top: 10px;
     }
-    .item{
+    .cart-item{
         flex: 1;
         max-width: 100%;
         text-align: center;
-        border: 1px solid #000;
         padding: 10px;
         margin: 10px;
+    }
+    .total-value {
+        font-weight: bold;
     }
 </style>

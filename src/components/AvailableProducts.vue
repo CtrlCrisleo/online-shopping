@@ -99,7 +99,6 @@ export default {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
-
     }
     .logo{
         max-width: 100%;
@@ -107,7 +106,7 @@ export default {
     }
     .products {
         flex-basis: 50%;
-        margin-right: 20px;
+        margin: 20px;
     }
     .product-title {
         display: flex;
@@ -169,6 +168,7 @@ export default {
         .container {
             flex-wrap: wrap;
             align-items: flex-start;
+            justify-content: center;
         }
     }
     @media (max-width: 767px) {
